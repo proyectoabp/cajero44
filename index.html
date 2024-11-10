@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.avif">
+    <title>Cajero Automático</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-container" class="container">
+        <div class="screen">
+            <div id="login-display" class="display">Ingrese su NIP</div>
+        </div>
+        <div class="keypad">
+            <button onclick="pressLoginKey(1)">1</button>
+            <button onclick="pressLoginKey(2)">2</button>
+            <button onclick="pressLoginKey(3)">3</button>
+            <button onclick="pressLoginKey(4)">4</button>
+            <button onclick="pressLoginKey(5)">5</button>
+            <button onclick="pressLoginKey(6)">6</button>
+            <button onclick="pressLoginKey(7)">7</button>
+            <button onclick="pressLoginKey(8)">8</button>
+            <button onclick="pressLoginKey(9)">9</button>
+            <button onclick="clearLoginEntry()">C</button>
+            <button onclick="pressLoginKey(0)">0</button>
+            <button onclick="login()">Enter</button>
+        </div>
+    </div>
+
+    <div id="atm-container" class="container" style="display: none;">
+        <div class="screen">
+            <div id="display" class="display">Bienvenido</div>
+        </div>
+        <div class="controls">
+            <div class="buttons">
+                <button onclick="showBalance()">Consultar Saldo</button>
+                <button onclick="withdraw()">Retirar Efectivo</button>
+                <button onclick="deposit()">Depositar Efectivo</button>
+                <button onclick="exit()">Salir</button>
+            </div>
+            <div class="keypad">
+                <button onclick="pressKey(1)">1</button>
+                <button onclick="pressKey(2)">2</button>
+                <button onclick="pressKey(3)">3</button>
+                <button onclick="pressKey(4)">4</button>
+                <button onclick="pressKey(5)">5</button>
+                <button onclick="pressKey(6)">6</button>
+                <button onclick="pressKey(7)">7</button>
+                <button onclick="pressKey(8)">8</button>
+                <button onclick="pressKey(9)">9</button>
+                <button onclick="clearEntry()">C</button>
+                <button onclick="pressKey(0)">0</button>
+                <button onclick="enter()">Enter</button>
+            </div>
+        </div>
+        <div id="cash-display" class="cash-display" style="display: none;">        
+            <div class="first-row">
+                <img src="path_to_image1" alt="image1">
+                <img src="path_to_image2" alt="image2">
+                <img src="path_to_image3" alt="image3">
+                <img src="path_to_image4" alt="image4">
+                <img src="path_to_image5" alt="image5">
+            </div>
+            <img src="path_to_image6" alt="image6">
+            <img src="path_to_image7" alt="image7">
+            <img src="path_to_image8" alt="image8">
+        </div>        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
